@@ -80,6 +80,8 @@ I really like music, and my most played artist in 2017 was MF DOOM. I'm an avid 
 <span style="color:orange; font-weight: bold; font-size: 150%;">Rachel Sousa</span><br>
 *Major:* Mathematics<br>
 *Research interests:* mathematical modeling of self-organizing vegetation in arid landscapes
+<br><br>
+I enjoy painting, cooking, and outdoor activities such as hiking, golfing, and wakesurfing.
 <div style="clear: both;"></div>
 
 --- 
