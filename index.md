@@ -91,6 +91,13 @@ plot(pressures, n_ads) # plots adsorption isotherm
 
 An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development of `PorousMaterials` when we make the first version open source.
 
+### Deciphering the code for transcriptional gene regulation
+
+Gene regulation is the process by which cells orchestrate the synthesis of proteins and RNA molecules for which their genome encodes. An intimate understanding of how genes are regulated in human will enable cures for genetic disorders, effective treatments for cancers, and increases in human longevity.
+
+Much remains to be understood about regulatory elements in the human genome, such as promoters, insulators, silencers, and enhancers, and how they dictate the level of expression of a given gene. Several assays have been developed to interrogate the regulatory activity of DNA sequences. These assays generate very large, complex data sets. An arm of our research, in collaboration with Wouter Meuleman at [Altius Institute for Biomedical Sciences](http://www.altius.org/), is to to employ artificial intelligence algorithms, such as convolutional neural networks, to learn from such gene expression data sets how regulatory instructions are encoded into our genome. We aim to design neural network architectures to extract useful biological insights from gene expression data sets.
+
+
 ### Self-organizing vegetation in arid landscapes
 
 In the thirsty grasslands of Namibia, the landscape is covered by thousands of small, barren disks called fairy circles.
