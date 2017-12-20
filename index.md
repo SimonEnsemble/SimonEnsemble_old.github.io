@@ -3,7 +3,7 @@ feature_text: |
   # <span style="color:white">The Simon Research Ensemble</span>
   We use mathematics, machine learning, and computer simulations as a toolkit to understand and solve problems.
 feature_image: images/treez.jpg 
-excerpt: "this is an excerpt"
+excerpt: "The Simon Ensemble at Oregon State University"
 ---
 
 <style>
