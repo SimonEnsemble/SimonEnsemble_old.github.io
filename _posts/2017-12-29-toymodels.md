@@ -38,7 +38,7 @@ I am sharing this story for two reasons. First, this underscores how curiosity-d
 
 I find toy models incredibly helpful to bring clarity to a problem. In 2015, we [me, Braun, Carraro, and Smit] developed a [toy model](http://dx.doi.org/10.1073/pnas.1613874114) [4] for a porous material that possesses rotating ligands. Our goal was to intimately understand the physical implications of rotating ligands on how gas adsorbs into such a material, as a consequence of the rotating ligands.
 
-{:.center}
+{:.centerr}
 <figure>
     <img src="/images/rotatingligandsmodel.png" alt="image" style="width: 70%;">
     <figcaption>The squares represent cages of a porous material where gas molecules (green balls) can sit. The purple bars are rotating ligands that can adopt one of two rotational conformations: rotated into the pore or parallel to the cage walls. The affinity of a gas molecule for a cage depends on the states of its two ligands.</figcaption>
