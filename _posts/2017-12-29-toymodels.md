@@ -3,7 +3,7 @@ title: On toy models
 category: Research directions
 indexing: true
 comments: true
-excerpt: On the utility of toy models.
+excerpt: On the utility of toy models: kidney donations and porous materials with rotating ligands.
 author: Cory Simon
 ---
 
@@ -11,9 +11,9 @@ There are currently ~95,000 people waiting for a kidney transplant in the US. In
 
 Imagine person W needs a kidney transplant. Humans are normally born with two kidneys and typically can live a healthy life with only one kidney. Consequently, the husband H of person W is willing to donate his kidney to his wife W to save her life.
 
-However, several biological conditions, e.g. blood type compatibility, must be met to ensure that a donated kidney will not be rejected when transplanted. The probability of an exact match between two unrelated people is a daunting 1 in 100,000 [2]. So, it is extremeley unlikely that husband H is able, despite willing, to donate his kidney to his wife W.
+However, several biological conditions, e.g. blood type compatibility, must be met to ensure that a donated kidney will not be rejected when transplanted. The probability of an exact match between two unrelated people is a daunting 1 in 100,000 [2]. So, it is very unlikely that husband H is able, despite willing, to donate his kidney to his wife W.
 
-While many people would be willing to donate his/her kidney to a loved one, as husband H, it is much less likely that a given person will volunteer to donate his/her kidney to a random other person in need of a kidney. The wait list for kidneys is long.
+While many people would be willing to donate his/her kidney to a loved one, as husband H is willing, it is much less likely that a given person will volunteer to donate his/her kidney to a random other person in need of a kidney. The wait list for kidneys is long.
 
 For good reason, it is illegal for kidneys to be sold on the market, so buying a kidney for wife W is not an option.
 
@@ -38,7 +38,7 @@ I am sharing this story for two reasons. First, this underscores how curiosity-d
 
 I find toy models incredibly helpful to bring clarity to a problem. In 2015, we [me, Braun, Carraro, and Smit] developed a [toy model](http://dx.doi.org/10.1073/pnas.1613874114) [4] for a porous material that possesses rotating ligands. Our goal was to intimately understand the physical implications of rotating ligands on how gas adsorbs into such a material, as a consequence of the rotating ligands.
 
-{:.centerr}
+{:.center}
 <figure>
     <img src="/images/rotatingligandsmodel.png" alt="image" style="width: 70%;">
     <figcaption>The squares represent cages of a porous material where gas molecules (green balls) can sit. The purple bars are rotating ligands that can adopt one of two rotational conformations: rotated into the pore or parallel to the cage walls. The affinity of a gas molecule for a cage depends on the states of its two ligands.</figcaption>
