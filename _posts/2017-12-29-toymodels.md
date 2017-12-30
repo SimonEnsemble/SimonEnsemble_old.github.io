@@ -3,7 +3,7 @@ title: On toy models
 category: Research directions
 indexing: true
 comments: true
-excerpt: On the utility of toy models: kidney donations and porous materials with rotating ligands.
+excerpt: On the utility of toy models; kidney donations and porous materials with rotating ligands.
 author: Cory Simon
 ---
 
