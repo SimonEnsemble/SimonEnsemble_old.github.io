@@ -23,12 +23,13 @@ exclude:
 - alembic-jekyll-theme.gemspec
 
 # 2. Installed Gems
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-mentions
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-redirect-from
+ # - jekyll-default-layout # new
 - jekyll-feed
 - jemoji
 
@@ -85,7 +86,7 @@ logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
 description: "The Simon Ensemble at Oregon State University" # Site description and default description, also used in jekyll-seo-tag
  # url: "local" # Site url, also used in jekyll-seo-tag
  # url: http://localhost:4000
-url: http://SimonEnsemble.github.io
+url: https://simonEnsemble.github.io
 baseurl: ""
  # repo: "https://github.com/CorySimon/alembic"
 email: "CoryMSimon@gmail.com"
