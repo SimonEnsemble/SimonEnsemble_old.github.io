@@ -123,11 +123,11 @@ $$\langle x \rangle = \sum_{\nu} p_{\nu} x_{\nu},$$
 
 where $p_{\nu}$ is the probability of observing microstate $\nu$ and $x_{\nu}$ is the end-to-end distance at that microstate. Given the statistical weight in the isothermal-isoforce ensemble (with $E_{\nu}=0$):
 
-$$p_{\nu}=\frac{e^{-\beta f x_{\nu}}}{\Delta},$$
+$$p_{\nu}=\frac{e^{\beta f x_{\nu}}}{\Delta},$$
 
 since the partition function is the normalization factor in the probability distribution governing the microstates. Plugging $p_{\nu}$ into the formula for $\langle x \rangle$ and recognizing this as a derivative of the partition function:
 
-$$\langle x \rangle = \sum_{\nu} \frac{e^{-\beta f x_{\nu}}}{\Delta} x_{\nu}= -\left(\frac{\partial \log \Delta}{\partial (\beta f)} \right)_{\beta,n}.$$
+$$\langle x \rangle = \sum_{\nu} \frac{e^{\beta f x_{\nu}}}{\Delta} x_{\nu}= \left(\frac{\partial \log \Delta}{\partial (\beta f)} \right)_{\beta,n}.$$
 
 Upon taking the derivative, we get the Langevin function of $\beta b f$:
 
