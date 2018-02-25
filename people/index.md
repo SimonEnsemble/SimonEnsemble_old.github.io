@@ -29,7 +29,7 @@ titlez {
 ![Cory](photos/cory_bowtie.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Cory Simon</span><br>
 Cory.Simon [at] oregonstate.edu<br>
-Gleeson Hall 211<br><br>
+Kelley Engineering Center 2045<br><br>
 <a href="https://twitter.com/CoryMSimon" data-size="large" class="twitter-follow-button" data-show-count="false">Follow @CoryMSimon</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
 <a href="{{ site.url }}/CorySimonCV.pdf">Full Curriculum Vitae</a>.<br>
 <div style="clear: both;"></div>
