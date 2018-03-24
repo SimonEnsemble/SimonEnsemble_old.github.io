@@ -60,7 +60,7 @@ collections:
     output: true
     description: "Musings on science, math, engineering, and the environment." # The post list page content
     feature_text: ""
-    feature_image: "../images/OregonCoast.JPG"
+    feature_image: "https://simonensemble.github.io/images/OregonCoast.JPG"
 
 # 6. Jekyll collections settings
 defaults:
