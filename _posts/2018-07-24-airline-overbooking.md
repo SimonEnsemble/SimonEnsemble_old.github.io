@@ -4,7 +4,7 @@ category: Operations Research
 indexing: true
 comments: true
 excerpt: Airlines overbook flights to maximize profits. But by how much should they overbook? Simulations can address this question!
-author: Mira Khare, Melanie Huynh, Cory Simon
+author: Mira Khare, Melanie Huynh, Arni Sturluson, Cory Simon
 ---
 
 Airlines [overbook](https://en.wikipedia.org/wiki/Overselling) flights to maximize profits.
@@ -117,4 +117,4 @@ ylabel("net revenue")
 
 The box plot shows that, if we do not overbook (0 on the x-axis), we on average receive less net revenue than if we do overbook. If we overbook too much, e.g. sell 15 tickets beyond capacity, we see that the average net revenue is less than if we overbook because we are paying out costly vouchers. The optimal amount of overbooking with these parameters is shown by the box plot to be 5-7 tickets beyond capacity. Of course, this result depends on the probability that a customer will show up, the cost of the flight and voucher, and number of seats on the plane.
 
-This code was developed by Mira Khare, Melanie Huynh, and two high school students for the Summer Experience in Science and Engineering for Youth (SESEY) at Oregon State University.
+This code was developed by Mira Khare, Melanie Huynh, Arni Sturluson, and two high school students for the Summer Experience in Science and Engineering for Youth (SESEY) at Oregon State University.
