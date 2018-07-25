@@ -117,4 +117,6 @@ ylabel("net revenue")
 
 The box plot shows that, if we do not overbook (0 on the x-axis), we on average receive less net revenue than if we do overbook. If we overbook too much, e.g. sell 15 tickets beyond capacity, we see that the average net revenue is less than if we overbook because we are paying out costly vouchers. The optimal amount of overbooking with these parameters is shown by the box plot to be 5-7 tickets beyond capacity. Of course, this result depends on the probability that a customer will show up, the cost of the flight and voucher, and number of seats on the plane.
 
+Note: airlines hire analysts to do exactly this. See [this NYT article](https://www.nytimes.com/2007/05/30/business/30bump.html?pagewanted=all&_r=0).
+
 This code was developed by Mira Khare, Melanie Huynh, Arni Sturluson, and two high school students for the [Summer Experience in Science and Engineering for Youth](http://cbee.oregonstate.edu/sesey) (SESEY) at Oregon State University.
