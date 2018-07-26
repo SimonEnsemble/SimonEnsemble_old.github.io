@@ -103,7 +103,7 @@ We depict the results using a box plot for each amount of overbooking:
 {% highlight julia %}
 using PyPlot
 
-plot(revenue, labels=0:max_overbooking)
+boxplot(revenue, labels=0:max_overbooking)
 xlabel("# tickets sold beyond capacity")
 ylabel("net revenue")
 {% endhighlight %}
