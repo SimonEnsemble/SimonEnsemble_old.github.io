@@ -70,3 +70,7 @@ Also see [Why choose OSU?](http://admissions.oregonstate.edu/international/why-c
 :books: Corvallis is among America's most educated cities [[source](https://www.forbes.com/2008/02/07/americas-smartest-cities-oped-cx_apa_0207smartest_slide_6.html)].
 
 :moneybag: No sales tax in Oregon!
+
+# Computational power
+
+The group contributed four nodes, each having 20 physical CPU cores and two NVIDIA GeForce GTX 1080 Ti GPUs, to the high-performance engineering cluster in the College of Engineering at Oregon State. While the Simon Ensemble has priority on the computing resources it contributed, the Simon Ensemble has access to all 1,554 processor nodes on the high-performance computing cluster. A full-time staff manages these computing resources and serves as technical support. The group plans to double its contribution to the computing cluster in the next two years. The PI and grad students each possess high-performance Linux workstations with GPU computing capabilities and two high-definition monitors to increase productivity.

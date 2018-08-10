@@ -26,10 +26,10 @@ titlez {
 
 # Assistant Professor
 
-![Cory](photos/cory.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
+![Cory](photos/cory_bowtie.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Cory Simon</span><br>
 Cory.Simon [at] oregonstate.edu<br>
-Gleeson Hall 211<br><br>
+Kelley Engineering Center 2045<br><br>
 <a href="https://twitter.com/CoryMSimon" data-size="large" class="twitter-follow-button" data-show-count="false">Follow @CoryMSimon</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
 <a href="{{ site.url }}/CorySimonCV.pdf">Full Curriculum Vitae</a>.<br>
 <div style="clear: both;"></div>
@@ -91,4 +91,13 @@ I enjoy painting, cooking, and outdoor activities such as hiking, golfing, and w
 *Research interests:* molecular simulations in flexible, nanoporous materials; software development
 <br><br>
 My favorite TV show is Battlestar Galactica, and my favorite board game is Hansa Teutonica.
+<div style="clear: both;"></div>
+
+--- 
+![Melanie](photos/Melanie.png){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
+<span style="color:orange; font-weight: bold; font-size: 150%;">Melanie Huynh</span><br>
+*Major:* Biological Engineering<br>
+*Research interests:* computational modeling and simulations of biomedical processes
+<br><br>
+I enjoy digital and traditional art, and electronic music composition.
 <div style="clear: both;"></div>

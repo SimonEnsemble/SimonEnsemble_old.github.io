@@ -38,7 +38,7 @@ An exciting aspect of MOFs is their modular and versatile chemistry. In the synt
 	</center>
 </figure>
 
-By changing the chemistry of the metal nodes and linker molecules, *many* different MOFs can be synthesized. Tens of thousands of different MOFs have been synthesized to date.
+By changing the metal nodes and linker molecules, *many* different MOFs can be synthesized to exhibit diverse pore geometries and surface chemistries. Tens of thousands of different MOFs have been synthesized to date.
 
 <figure>
 	<center>
@@ -68,11 +68,11 @@ We are also developing new algorithms to overcome challenges presented in the si
 
 #### Bringing machine learning into materials science
 
-Highly accurate molecular simulations/calculations often incur prohibitive computational costs, precluding *in-silico* high-throughput screening of MOFs with these high-level methods. A focus of our group is to leverage recent advances in deep learning and train neural networks to recognize optimal MOFs. Neural networks are attractive because they automatically discover features important for determining performance, negating the need for hand-engineered features. Bringing artificial intelligence algorithms into materials science can expedite high-throughput computational screenings by focusing expensive but more accurate computations on only the most promising candidates.
+Highly accurate molecular simulations/calculations often incur prohibitive computational costs, precluding *in-silico* high-throughput screening of MOFs with these high-level methods. A focus of our group is to leverage recent advances in deep learning and train neural networks to recognize optimal MOFs. Neural networks are attractive because they automatically discover features important for determining performance, negating the need for hand-engineered features. Bringing machine learning algorithms into materials science can expedite high-throughput computational screenings by focusing expensive but more accurate computations on only the most promising candidates.
 
 #### Software development
 
-The routine simulation of gas adsorption in porous materials is cumbersome in available software packages and inaccessible to those with minimal programming skills. Our group is developing software to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Futhermore, writing parallel code in Julia is seamless. To illustrate, our software package `PorousMaterials` could compute the adsorption isotherm of methane in metal-organic framework HKUST-1 as follows:
+The routine simulation of gas adsorption in porous materials is cumbersome in available software packages and inaccessible to those with minimal programming skills. Our group is developing software to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Futhermore, writing parallel code in Julia is seamless. To illustrate, our software package `PorousMaterials` can compute the adsorption isotherm of methane in metal-organic framework HKUST-1 as follows:
 
 {% highlight julia %}
 using PorousMaterials
@@ -89,14 +89,18 @@ n_ads = adsorption_isotherm(framework, adsorbate, temperature, pressures, molecu
 plot(pressures, n_ads) # plots adsorption isotherm
 {% endhighlight %}
 
-An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development of `PorousMaterials` when we make the first version open source.
+An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development and use of `PorousMaterials` when we release `v0`.
 
 ### Deciphering the code for transcriptional gene regulation
 
-Gene regulation is the process by which cells orchestrate the synthesis of proteins and RNA molecules for which their genome encodes. An intimate understanding of how genes are regulated in human will enable cures for genetic disorders, effective treatments for cancers, and increases in human longevity.
+Gene regulation is the process by which cells orchestrate the synthesis of proteins and RNA molecules for which their genome encodes. An intimate understanding of how genes are regulated in human will enable cures for genetic disorders, effective treatments for cancers, and increases in human longevity. However, much remains to be understood about basic regulatory elements in the human genome, such as promoters, insulators, silencers, and enhancers, and how they dictate the level of expression of a given gene. Several high-throughput assays have been developed to interrogate the activity of regulatory DNA sequences. An arm of our research, in collaboration with Wouter Meuleman at [Altius Institute for Biomedical Sciences](http://www.altius.org/), is to employ deep learning algorithms (e.g. ConvNets) to learn from large and noisy gene expression data sets how regulatory instructions are encoded into our genome. We aim to design interpretable deep learning architectures to extract useful biological insights from gene expression data sets.
 
-Much remains to be understood about regulatory elements in the human genome, such as promoters, insulators, silencers, and enhancers, and how they dictate the level of expression of a given gene. Several assays have been developed to interrogate the regulatory activity of DNA sequences. These assays generate very large, complex data sets. An arm of our research, in collaboration with Wouter Meuleman at [Altius Institute for Biomedical Sciences](http://www.altius.org/), is to to employ artificial intelligence algorithms, such as convolutional neural networks, to learn from such gene expression data sets how regulatory instructions are encoded into our genome. We aim to design neural network architectures to extract useful biological insights from gene expression data sets.
-
+<figure>
+	<center>
+	<img src="images/gene_regulation.png" alt="promoter" style="width:600px">
+	<figcaption>A DNA promoter sequence recruits transcription factors that bind to DNA in a sequence-specific manner to recruit RNA polymerase II and initiate transcription of a gene.</figcaption>
+	</center>
+</figure>
 
 ### Self-organizing vegetation in arid landscapes
 
@@ -111,7 +115,7 @@ In the thirsty grasslands of Namibia, the landscape is covered by thousands of s
 
 Tune into the BBC documentary, *Africa* (S1: E1, at 3:00) [on Netflix] to listen to David Attenborough introduce fairy circles in his captivating narration. 
 
-Fairy circles may at first appear to have little relevance in a research program in chemical engineering. To the contrary, the etiology of these striking patterns can be explained by the principles of fluid flow, the theory of phase transitions, and multiple-scale analysis. Our group is developing a mathematical model to capture the formation and persistence of these fairy circles and understand the influence of climate on the pattern. Our efforts are towards understanding and monitoring how ecological systems cope with climate stress such as drought and, perhaps, revealing new strategies to intensify agricultural crop production in arid climates.
+Fairy circles may at first appear to have little relevance in a research program in chemical engineering. To the contrary, the etiology of these striking patterns can be explained by the principles of fluid flow, the theory of phase transitions, and multiple-scale analysis. Our group is developing a mathematical model to capture the formation and persistence of these fairy circles and understand the influence of climate on the pattern. Our efforts are towards understanding and monitoring how ecological systems cope with climate stresses and, perhaps, revealing new strategies to intensify agricultural crop production in arid climates.
 
 ## The value of mathematical modeling
 

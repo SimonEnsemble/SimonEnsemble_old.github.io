@@ -34,7 +34,7 @@ plugins:
 - jemoji
 
 # 3. Gem settings
-paginate: 2 # jekyll-paginate > items per page
+paginate: 10 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
@@ -60,7 +60,7 @@ collections:
     output: true
     description: "Musings on science, math, engineering, and the environment." # The post list page content
     feature_text: ""
-    feature_image: "../images/OregonCoast.JPG"
+    feature_image: "https://simonensemble.github.io/images/OregonCoast.JPG"
 
 # 6. Jekyll collections settings
 defaults:
@@ -70,14 +70,14 @@ defaults:
       type: pages
     values:
       layout: page # Default layout
-      image: "../images/treez_light.png" # Default image for sharing
+      image: "../assets/default-social-image.png" # Default image for sharing
   -
     scope:
       path: ""
       type: posts
     values:
       layout: post # Default layout
-      image: "../images/treez_light.png" # Default image for sharing
+      image: "../assets/default-social-image.png" # Default image for sharing
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
