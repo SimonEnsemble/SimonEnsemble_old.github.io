@@ -71,25 +71,9 @@ We are also developing new algorithms to overcome challenges presented in the si
 Highly accurate molecular simulations/calculations often incur prohibitive computational costs, precluding *in-silico* high-throughput screening of MOFs with these high-level methods. A focus of our group is to leverage recent advances in deep learning and train neural networks to recognize optimal MOFs. Neural networks are attractive because they automatically discover features important for determining performance, negating the need for hand-engineered features. Bringing machine learning algorithms into materials science can expedite high-throughput computational screenings by focusing expensive but more accurate computations on only the most promising candidates.
 
 #### Software development
+Our group is developing `PorousMaterials.jl` (see [here](https://github.com/SimonEnsemble/PorousMaterials.jl)) to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Futhermore, writing parallel code in Julia is seamless. 
 
-The routine simulation of gas adsorption in porous materials is cumbersome in available software packages and inaccessible to those with minimal programming skills. Our group is developing software to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Futhermore, writing parallel code in Julia is seamless. To illustrate, our software package `PorousMaterials` can compute the adsorption isotherm of methane in metal-organic framework HKUST-1 as follows:
-
-{% highlight julia %}
-using PorousMaterials
-
-framework = read_crystal_structure("HKUST-1.cif")
-adsorbate = read_molecule("CH4.mol")
-molecular_model = read_forcefield("UFF.csv")
-
-temperature = 298.0 # K
-pressures = linspace(0.01, 100.0, 10) # array of 10 equally-spaced pressures, in bar.
-
-n_ads = adsorption_isotherm(framework, adsorbate, temperature, pressures, molecular_model) # runs simulation, returns amount adsorbed at each pressure
-
-plot(pressures, n_ads) # plots adsorption isotherm
-{% endhighlight %}
-
-An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development and use of `PorousMaterials` when we release `v0`.
+An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development and use of `PorousMaterials.jl`.
 
 ### Deciphering the code for transcriptional gene regulation
 

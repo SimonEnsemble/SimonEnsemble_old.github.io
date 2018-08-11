@@ -98,6 +98,7 @@ avatarurl: "https://www.gravatar.com/avatar/de74dcd32c1abfb40e07e895346f416d" # 
 navigation_header:
   Research: /
   Publications: /publications/
+  Software: /software/
   Teaching: /teaching/
   People: /people/
   Blog: /blog/
