@@ -6,6 +6,8 @@ gem "jekyll", "~> 3.4"
 # The theme for the site
 gem "alembic-jekyll-theme", "~> 2.1"
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 # The plugins for the site
 group :jekyll_plugins do
   gem "jekyll-sitemap"
