@@ -178,4 +178,4 @@ This is sort of obvious in hindsight since transposing a matrix does not change 
 
 ### acknowledgement
 
-Thanks to the group of [Xiaoli Fern](https://web.engr.oregonstate.edu/~xfern/) in Computer Science and my PhD student Arni Sturluson at Oregon State University for the insightful discussion group we held on the orthogonal Procrustes problem. Also thanks to [Wikipedia](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem) and [these notes](http://winvector.github.io/xDrift/orthApprox.pdf) by John Mount.
+Thanks to the group of [Xiaoli Fern](https://web.engr.oregonstate.edu/~xfern/) in Computer Science and my students Arni Sturluson and Carson Silsby at Oregon State University for the insightful discussion group we held on the orthogonal Procrustes problem. Also thanks to [Wikipedia](https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem) and [these notes](http://winvector.github.io/xDrift/orthApprox.pdf) by John Mount.
