@@ -1,8 +1,8 @@
 ---
 feature_text: |
   # <span style="color:white">The Simon Research Ensemble</span>
-  We use mathematics, machine learning, and computer simulations as a toolkit to understand and solve problems.
-feature_image: images/treez.jpg 
+   We use machine learning, molecular models & simulations, and statistical mechanics to study adsorption in nano-porous materials.
+feature_image: images/hartscove.JPG
 excerpt: "The Simon Ensemble at Oregon State University"
 ---
 
@@ -15,7 +15,9 @@ figcaption {
 }
 </style>
 
-The Simon Research Ensemble resides in the School of Chemical, Biological, and Environmental Engineering ([CBEE](http://cbee.oregonstate.edu/)) at [Oregon State University](http://oregonstate.edu/). We leverage mathematics, machine learning, statistical mechanics, and computer simulations to shed light on physical phenomena ranging from porous materials with moving parts, to the transcriptional regulation of gene expression, to mysterious, barren patches in arid grasslands. We aim to understand intimately and to explain clearly. The problems we approach have implications in clean energy, security, health, and human welfare.
+The Simon Research Ensemble resides in the School of Chemical, Biological, and Environmental Engineering ([CBEE](http://cbee.oregonstate.edu/)) at [Oregon State University](http://oregonstate.edu/). 
+We leverage machine learning, statistical mechanics, and molecular simulations to accelerate the discovery and deployment of nano-porous materials for gas storage, separations, and sensing.
+By collaborating with experimentalists, our efforts directly contribute to the development of novel materials and technologies, generation of cheaper and cleaner energy, and enhancement of national security.
 
 <figure>
 	<center>
@@ -47,9 +49,11 @@ By changing the metal nodes and linker molecules, *many* different MOFs can be s
 	</center>
 </figure>
 
-This high chemical tunability allows chemists to fine-tune MOF architectures to target specific molecules for applications in gas storage and separations, catalysis, and chemical sensing. More broadly, this versatile and modular chemistry enables the synthesis of MOFs with diverse properties and functionalities.
+This high chemical tunability allows chemists to fine-tune MOF architectures to target specific molecules for applications in gas storage, separations, and sensing. More broadly, this versatile and modular chemistry enables the synthesis of MOFs with diverse properties and functionalities.
 
 An arm of our research is to employ molecular models and simulations to (i) sift through the many variations of MOFs and predict the top performing materials for a given application, (ii) predict novel properties that may emerge in flexible MOF paradigms, (iii) bring clarity to experimental observations, and (iv) identify means to exploit/harness unique adsorption properties in MOFs for engineering applications.
+
+We aim to understand intimately and explain clearly.
 
 #### Dynamic/flexible MOFs
 
@@ -71,9 +75,9 @@ We are also developing new algorithms to overcome challenges presented in the si
 Highly accurate molecular simulations/calculations often incur prohibitive computational costs, precluding *in-silico* high-throughput screening of MOFs with these high-level methods. A focus of our group is to leverage recent advances in deep learning and train neural networks to recognize optimal MOFs. Neural networks are attractive because they automatically discover features important for determining performance, negating the need for hand-engineered features. Bringing machine learning algorithms into materials science can expedite high-throughput computational screenings by focusing expensive but more accurate computations on only the most promising candidates.
 
 #### Software development
-Our group is developing `PorousMaterials.jl` (see [here](https://github.com/SimonEnsemble/PorousMaterials.jl)) to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Futhermore, writing parallel code in Julia is seamless. 
+Our group is developing `PorousMaterials.jl` (see [here](https://github.com/SimonEnsemble/PorousMaterials.jl)) to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Furthermore, writing parallel code in Julia is seamless. 
 
-An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development and use of `PorousMaterials.jl`.
+An advantage of having our own, well-designed code that we know well is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development and use of `PorousMaterials.jl`.
 
 ### Deciphering the code for transcriptional gene regulation
 
@@ -119,4 +123,4 @@ We frequently approach poorly understood problems with parsimonious, but illumin
 
 > Now it would be very remarkable if any system existing in the real world could be exactly represented by any simple model. However, cunningly chosen parsimonious models often do provide remarkably useful approximations. For example, the law PV = RT relating pressure P, volume V and temperature T of an ideal gas via a constant R is not exactly true for any real gas, but it frequently provides a useful approximation and furthermore its structure is informative since it springs from a physical view of the behavior of gas molecules. For such a model there is no need to ask the question “Is the model true?”. If “truth” is to be the “whole truth” the answer must be “No”. The only question of interest is “Is the model illuminating and useful?”. :microphone: George Box
 
-For processes where the physics are well-understood, we employ _predictive_ models, where we attempt to model as much of the physics as the accuracies of current models permit. One might argue that the development of predictive models has the most lucid impact; imagine if a molecular model were so accurate that we could design the optimal nanoporous material for hydrogen storage on a computer. However, rarely are molecular models so accurate, and typically the most accurate models are computationally infeasible. Still, predictive models are often capable of capturing qualitative differences between materials, generating statistically reliable performance rankings of a set of materials, or elucidating trends/design rules.
+For processes where the physics are well-understood, we employ _predictive_ models, where we attempt to model as much of the physics as the accuracies of current models permit. One might argue that the development of predictive models has the most lucid impact; imagine if a molecular model were so accurate that we could design the optimal nano-porous material for hydrogen storage on a computer. However, rarely are molecular models so accurate, and typically the most accurate models are computationally infeasible. Still, predictive models are often capable of capturing qualitative differences between materials, generating statistically reliable performance rankings of a set of materials, or elucidating trends/design rules.

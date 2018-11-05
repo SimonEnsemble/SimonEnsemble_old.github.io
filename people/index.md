@@ -96,8 +96,8 @@ My favorite TV show is Battlestar Galactica, and my favorite board game is Hansa
 --- 
 ![Melanie](photos/Melanie.png){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Melanie Huynh</span><br>
-*Major:* Biological Engineering<br>
-*Research interests:* computational modeling and simulations of biomedical processes
+*Major:* Chemical Engineering<br>
+*Research interests:* computational modeling and simulations of gas adsorption in MOFs
 <br><br>
-I enjoy digital and traditional art, and electronic music composition.
+I enjoy digital and traditional art and electronic music composition.
 <div style="clear: both;"></div>

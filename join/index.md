@@ -12,13 +12,13 @@ figcaption {
 </style>
 
 # Join our mission
-Students with a keen interest in statistical mechanics, computer simulations, machine learning, and/or applied mathematics:
+Students with a keen interest in molecular modeling & simulation, machine learning, and statistical mechanics:
 
-If you are an undergraduate or graduate student currently enrolled in or admitted to Oregon State University, I encourage you to contact me at Cory.Simon [at] oregonstate.edu to discuss available positions and potential research projects. Please include your CV and a short statement of your interests and career goals.
+If you are a student currently enrolled in or admitted to Oregon State University, I encourage you to contact me at Cory.Simon [at] oregonstate.edu to discuss available positions and potential research projects. Please include your CV and a short statement of your interests and career goals.
 
-If you are interested in pursuing a graduate degree at Oregon State University and joining the Simon Ensemble, please apply [here](http://cbee.oregonstate.edu/che-graduate-program) and mention your interest in working with me in your application.
+If you are interested in pursuing a graduate degree at Oregon State University and joining the Simon Ensemble, please apply [here](http://cbee.oregonstate.edu/che-graduate-program) and mention your interest in working with me in your application. Of course, any questions are welcome via email at Cory.Simon [at] oregonstate.edu.
 
-# My Advising Style
+# My advising style
 
 We work *together* towards a common mission.
 
@@ -53,24 +53,30 @@ Fortunately, our toolbox of mathematics, statistical mechanics, and machine lear
 
 # Oregon is awesome
 
-Also see [Why choose OSU?](http://admissions.oregonstate.edu/international/why-choose-osu).
+:evergreen_tree: Oregon is scenic and a great place for hiking, backpacking, camping, biking, rafting, etc. My own photos on [Ello](https://ello.co/cokes) and the Instagram [@outinoregon](https://www.instagram.com/outinoregon/) display some scenery you can encounter in Oregon.
 
-:evergreen_tree: Oregon is perfect for the outdoors: hiking, backpacking, camping, biking, skiing/snowboarding, rafting, etc. Beyond the cover images for this website, [here](https://www.instagram.com/outinoregon/) is a sample of the scenery you can encounter in Oregon.
+:mountain: Mt. Bachelor near Bend and Mt. Hood near Portland offer world-class snowboarding/skiing.
 
-:wine_glass: Corvallis is in the heart of Willamette Valley, which is known for its Pinot Noir wine.
+:ocean: the scenic Oregon coast is just an hour-long drive from Corvallis.
 
-:beer: There are several breweries in Corvallis.
+:wine_glass: Corvallis is in the heart of Willamette Valley, known for its Pinot Noir wine. Countless wineries to go wine-tasting with views of vineyards.
 
-:bicyclist: Corvallis is [bike-friendly](http://visitcorvallis.com/about-corvallis/corvallis-recognized-as-gold-level-bicycle-friendly-community/). There are many nearby biking trails.
+:beer: There are several breweries in Corvallis. And an apple cidery.
 
-:umbrella: Regarding [climate](https://en.wikipedia.org/wiki/Corvallis,_Oregon#Climate), temperatures are mild year-round in Corvallis. Rain keeps the scenery green and the air clean.
+:bicyclist: Corvallis is [bike-friendly](http://visitcorvallis.com/about-corvallis/corvallis-recognized-as-gold-level-bicycle-friendly-community/) for commuting to work (I bike to the office!) and offers many scenic biking trails.
 
-:house_with_garden: Enjoy the comforts of small town living in Corvallis: relatively affordable housing, little traffic, low crime rates, etc. Live the city life on the weekends; Portland is a fantastic city and only a 1.5 hr drive from Corvallis.
+:umbrella: Regarding [climate](https://en.wikipedia.org/wiki/Corvallis,_Oregon#Climate), temperatures are mild year-round in Corvallis. Rain keeps the scenery green and the air clean. The rainy season is romantic!
+
+:house_with_garden: Enjoy the comforts of small town living in Corvallis: genuinely friendly folks, relatively affordable housing, little traffic, low crime rates, etc. 
+
+:city_sunset: Live the city life on the weekends; Portland is my favorite city in the US and only a 1.5 hr drive from Corvallis.
 
 :books: Corvallis is among America's most educated cities [[source](https://www.forbes.com/2008/02/07/americas-smartest-cities-oped-cx_apa_0207smartest_slide_6.html)].
 
 :moneybag: No sales tax in Oregon!
 
+Also see [Why choose OSU?](http://admissions.oregonstate.edu/international/why-choose-osu).
+
 # Computational power
 
-The group contributed four nodes, each having 20 physical CPU cores and two NVIDIA GeForce GTX 1080 Ti GPUs, to the high-performance engineering cluster in the College of Engineering at Oregon State. While the Simon Ensemble has priority on the computing resources it contributed, the Simon Ensemble has access to all 1,554 processor nodes on the high-performance computing cluster. A full-time staff manages these computing resources and serves as technical support. The group plans to double its contribution to the computing cluster in the next two years. The PI and grad students each possess high-performance Linux workstations with GPU computing capabilities and two high-definition monitors to increase productivity.
+Our group contributed to the high-performance engineering cluster in the College of Engineering at Oregon State: (a) two nodes, each with 20 physical CPU cores and two NVIDIA GeForce GTX 1080 Ti GPUs and (b) four nodes, each with 44 cores. While we have priority running jobs on the computing resources we contributed, we have access to all 1,554 processor nodes on the high-performance computing cluster. A full-time staff manages these computing resources and serves as technical support. The PI and grad students each possess high-performance Linux workstations with GPU computing capabilities and two high-definition monitors to increase productivity.
