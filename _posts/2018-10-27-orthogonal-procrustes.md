@@ -124,6 +124,12 @@ $\Omega = VU^T$ maximizes $\text{tr}(Z\Sigma)$. Because $VU^T$ is a product of o
 
 After all of this fancy matrix algebra, we find the optimal orthogonal matrix to transform the points in $\mathcal{A}$ so as to align them with the corresponding points in $\mathcal{B}$ by (i) computing the singular value composition of $B^TA=U\Sigma V^T$, then (ii) setting $R=VU^T$, then (iii) transforming each point in $\mathbf{a}_i \in \mathcal{A}$ via a matrix multiplication $R\mathbf{a}_i$.
 
+<figure>
+    <img src="/blog/orthogonalProcrustes/after_alignment.png" alt="image" style="width: 70%;">
+    <figcaption>We computed the singular value decomposition of $B^TA=U\Sigma V^T$, then computed $R=VU^T$, then multiplied each point in $\mathcal{A}$ by $R$. Our solution to the orthogonal Procrustes problem nicely aligned the corresponding points!
+    </figcaption>
+</figure>
+
 ### numerical demonstration in Julia
 
 Load in our point cloud (literally) of 70 points ($d=2$):
