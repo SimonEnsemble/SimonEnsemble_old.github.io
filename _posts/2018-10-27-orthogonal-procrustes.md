@@ -122,11 +122,11 @@ $\text{tr}(Z\Sigma) = \text{tr}([\sigma_1 \mathbf{z}_1  \cdots  \sigma_d \mathbf
 So we choose $\Omega$ such that $Z$ is the identity matrix to maximize $\text{tr}(Z\Sigma)$. i.e., our solution is to choose $\Omega$ so that $Z=V^T\Omega U = I$. Right-multiply by $U^T$ and left-multiply by $V$, and, voila:
 $\Omega = VU^T$ maximizes $\text{tr}(Z\Sigma)$. Because $VU^T$ is a product of orthogonal matrices ($V$, $U^T$ orthogonality is constructed in the singular value decomposition), this choice of $\Omega$ satisfies our constraint that $\Omega^T\Omega=I$.
 
-After all of this fancy matrix algebra, we find the optimal orthogonal matrix to transform the points in $\mathcal{A}$ so as to align them with the corresponding points in $\mathcal{B}$ by (i) computing the singular value composition of $B^TA=U\Sigma V^T$, then (ii) setting $R=VU^T$, then (iii) transforming each point in $\mathbf{a}_i \in \mathcal{A}$ via a matrix multiplication $R\mathbf{a}_i$.
+After all of this fancy matrix algebra, we find the optimal orthogonal matrix to transform the points in $\mathcal{A}$ so as to align them with the corresponding points in $\mathcal{B}$ by (i) computing the singular value composition of $AB^T=U\Sigma V^T$, then (ii) setting $R=VU^T$, then (iii) transforming each point in $\mathbf{a}_i \in \mathcal{A}$ via a matrix multiplication $R\mathbf{a}_i$.
 
 <figure>
     <img src="/blog/orthogonalProcrustes/after_alignment.png" alt="image" style="width: 70%;">
-    <figcaption>We computed the singular value decomposition of $B^TA=U\Sigma V^T$, then computed $R=VU^T$, then multiplied each point in $\mathcal{A}$ by $R$. Our solution to the orthogonal Procrustes problem nicely aligned the corresponding points!
+    <figcaption>We computed the singular value decomposition of $AB^T=U\Sigma V^T$, then computed $R=VU^T$, then multiplied each point in $\mathcal{A}$ by $R$. Our solution to the orthogonal Procrustes problem nicely aligned the corresponding points!
     </figcaption>
 </figure>
 
@@ -150,12 +150,12 @@ R_known = rotation_matrix2d(θ)
 A = R_known * B .+ ϵ * randn(size(B)...)
 ```
 
-Compute the singular value decomposition of $B^TA$:
+Compute the singular value decomposition of $AB^T$:
 
 ```julia
 using LinearAlgebra
 
-F = svd(B' * A) # "F" for factorization
+F = svd(A * B') # "F" for factorization
 ```
 
 Recover the rotation matrix needed to transform the points in $A$ to re-align with those in $B$:
