@@ -29,7 +29,7 @@
 		// Dynamic Data loaded from CSV
 		var mofData = [];
 
-		d3.csv("/assets/latent_dim.csv", function(d){
+		d3.csv("/assets/latent_dim2.csv", function(d){
 			return{
 				cage_image : d.cage_image,
 				x : +d.x1,
@@ -140,14 +140,14 @@
 				.attr("fill", "steelblue")
 				.on("mouseover", function(d){
 	                //tooltip.html(string); //this will add the image on mouseover
-					tooltip.style("visibility", "visible").text((d.cage_image).substring(0, (d.cage_image).indexOf("_aligned.png")));
+					tooltip.style("visibility", "visible").text((d.cage_image).substring(0, (d.cage_image).indexOf("_no_box.png")));
 					tooltip2.style("visibility", "visible");
 				})
 				.on("mousemove", function(d){
 	                var string = "<img src=/images/all_cages/" + d.cage_image + " style='height: " + image_size + "px; width: " + image_size + "px; object-fit: contain'>";
 					// this will add the image and text on mouseover
 					return {
-						text : tooltip.text((d.cage_image).substring(0, (d.cage_image).indexOf("_aligned.png")))
+						text : tooltip.text((d.cage_image).substring(0, (d.cage_image).indexOf("_no_box.png")))
 							.style("left",(d3.event.pageX + (d3.event.pageX > w / 2 ? -(40 + 50) : 40))+"px")
 							.style("top", (d3.event.pageY + (d3.event.pageY > h / 2 ? -(10 + 10) : 10))+"px"),
 						image : tooltip2.html(string)
