@@ -83,10 +83,10 @@ R = \argmin_{\Omega : \text{ } \Omega ^T\Omega =I} \{ ||\Omega A||_F^2 + ||B||_F
 
 
 We can simplify $$||\Omega A||_F ^2$$ since $\Omega$ is an orthogonal matrix. Recall the trace $\text{tr}(\cdot)$ of a matrix is the sum of its diagonal entries. 
-Because entry $(i,i)$ of the matrix $Y^TY$ is $\mathbf{y}_i^T \mathbf{y}_i$, where $\mathbf{y}_i$ is column $i$ of the matrix $Y$, the Frobenius norm of $Y$ is equal to the trace of $Y^TY$:
+Because entry $(i,i)$ of the matrix $Y^TY$ is $\mathbf{y}_i^T \mathbf{y}_i$, where $\mathbf{y}_i$ is column $i$ of the matrix $Y$, the square of the Frobenius norm of $Y$ is equal to the trace of $Y^TY$:
 $||Y||_F^2=\text{tr}(Y^TY)$. Since $\Omega$ is an orthogonal matrix:
 
-$$||\Omega A||_F^2=\text{tr}[(\Omega A)^2(\Omega A)]=\text{tr}(A^T \Omega^T \Omega A) = \text{tr}(A^TA) = ||A||_F^2$$
+$$||\Omega A||_F^2=\text{tr}[(\Omega A)^T(\Omega A)]=\text{tr}(A^T \Omega^T \Omega A) = \text{tr}(A^TA) = ||A||_F^2$$
 
 We made some progress by showing that the first two terms of the objective do not depend on $\Omega$, hence:
 
