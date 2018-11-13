@@ -95,7 +95,7 @@ R = \argmax_{\Omega : \text{ } \Omega ^T\Omega =I} \sum_i \sum_j (\Omega A)_{ij}
 
 (Minimizing twice of a negative quantity is equivalent to maximizing the positive quantity.)
 
-Now, via the definition of matrix multiplication, entry $(i, i)$ of $B^T \Omega A$ is the dot product of column $i$ of $\Omega A$ and row $i$ of $B^T$, which is a column of $B$. 
+Now, via the definition of matrix multiplication, entry $(i, i)$ of $B^T \Omega A$ is the dot product of column $i$ of $\Omega A$ and row $i$ of $B^T$, which is column $i$ of $B$. 
 Therefore$^\ddagger$:
 
 $$\DeclareMathOperator*{\argmin}{arg\,min}
@@ -117,7 +117,7 @@ R = \argmax_{\Omega : \text{ }\Omega^T\Omega=I} \{ \text{tr}(\Omega U\Sigma V^T)
 The right equality follows from the invariance of the trace of matrix products to cyclic permutations of the product. Now, let $Z:=V^T \Omega U$, which is a product of orthogonal matrices; thus $Z$ is an orthogonal matrix itself (write out $Z^TZ$).
 
 Finally, it becomes transparent of how to maximize $\text{tr}(Z\Sigma)$ because we are taking the trace of an orthogonal matrix times a diagonal matrix with entries arranged in a non-increasing order down the diagonal. Because $\Sigma$ is a diagonal matrix,
-$\text{tr}(Z\Sigma) = \text{tr}([\sigma_1 \mathbf{z}_1  \cdots  \sigma_d \mathbf{z}_d])$, where $\sigma_i$ are the singular values of $AB^T$ that are across the diagonal of $\Sigma$. The $\mathbf{z}_i$'s are unit vectors since $Z$ is an orthogonal matrix, but cannot be chosen independently since they must be orthogonal to each other. Under this constraint, the trace of $Z\Sigma$ can be maximized by choosing $\Omega$ such that the $i$th entry of $\mathbf{z}_i$ is one and all other entries are zero. Under the constraint that the $\mathbf{z}_i$'s must be unit vectors and because $\sigma_1 \geq \cdots \geq \sigma_d$, all other choices of $\mathbf{z}_i$ lead to a smaller number in the $(i, i)$th entry of $Z\Sigma$ and decrease the trace of $Z\Sigma$; of course, the $\mathbf{z}_i$'s under this choice are orthogonal.
+$\text{tr}(Z\Sigma) = \text{tr}([\sigma_1 \mathbf{z}_1  \cdots  \sigma_d \mathbf{z}_d])$, where $\sigma_i$ are the singular values of $AB^T$ that are across the diagonal of $\Sigma$. The $\mathbf{z}_i$'s are unit vectors since $Z$ is an orthogonal matrix, but cannot be chosen independently since they must be orthogonal to each other. Under this constraint, the trace of $Z\Sigma$ can be maximized by choosing $\Omega$ such that the $i$th entry of $\mathbf{z}_i$ is one and all other entries are zero. Under the constraint that the $\mathbf{z}_i$'s must be unit vectors and because $\sigma_1 \geq \cdots \geq \sigma_d \geq 0$, all other choices of $\mathbf{z}_i$ lead to a smaller number in the $(i, i)$th entry of $Z\Sigma$ and decrease the trace of $Z\Sigma$; of course, the $\mathbf{z}_i$'s under this choice are orthogonal.
 
 So we choose $\Omega$ such that $Z$ is the identity matrix to maximize $\text{tr}(Z\Sigma)$. i.e., our solution is to choose $\Omega$ so that $Z=V^T\Omega U = I$. Right-multiply by $U^T$ and left-multiply by $V$, and, voila:
 $\Omega = VU^T$ maximizes $\text{tr}(Z\Sigma)$. Because $VU^T$ is a product of orthogonal matrices ($V$, $U^T$ orthogonality is constructed in the singular value decomposition), this choice of $\Omega$ satisfies our constraint that $\Omega^T\Omega=I$.
