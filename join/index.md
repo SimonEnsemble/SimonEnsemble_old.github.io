@@ -73,6 +73,8 @@ Fortunately, our toolbox of mathematics, statistical mechanics, and machine lear
 
 :books: Corvallis is among America's most educated cities [[source](https://www.forbes.com/2008/02/07/americas-smartest-cities-oped-cx_apa_0207smartest_slide_6.html)].
 
+:bus: We have free public transportation in Corvallis.
+
 :moneybag: No sales tax in Oregon!
 
 Also see [Why choose OSU?](http://admissions.oregonstate.edu/international/why-choose-osu).
