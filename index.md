@@ -49,6 +49,10 @@ By changing the metal nodes and linker molecules, *many* different MOFs can be s
 	</center>
 </figure>
 
+For example, below is an interactive visualization of Ni(SiF$_6$)(pyrazine). Left-click and drag to rotate, and scroll with your middle mouse button to zoom in.
+
+<iframe src="https://simonensemble.github.io/nisif6.html" width="700px" height="700 px"></iframe>
+
 This high chemical tunability allows chemists to fine-tune MOF architectures to target specific molecules for applications in gas storage, separations, and sensing. More broadly, this versatile and modular chemistry enables the synthesis of MOFs with diverse properties and functionalities.
 
 An arm of our research is to employ molecular models and simulations to (i) sift through the many variations of MOFs and predict the top performing materials for a given application, (ii) predict novel properties that may emerge in flexible MOF paradigms, (iii) bring clarity to experimental observations, and (iv) identify means to exploit/harness unique adsorption properties in MOFs for engineering applications.
