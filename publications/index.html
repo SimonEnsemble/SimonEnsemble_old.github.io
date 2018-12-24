@@ -57,7 +57,8 @@ quotations{
         <h7><nbr>{{ forloop.rindex }}</nbr>.
         <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations></h7><br>
         {{ work.authors }}.<br>
-        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a><br>
+        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a>. {{ work.other }}
+        <br>
     </div>
     <div class="clear"></div>
   </div>
@@ -77,7 +78,7 @@ quotations{
         <h7><nbr>{{ forloop.rindex }}</nbr>.
         <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations></h7><br>
         {{ work.authors }}.<br>
-        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a><br>
+        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">link</a><br> {{work. other }}
     </div>
     <div class="clear"></div>
   </div>
