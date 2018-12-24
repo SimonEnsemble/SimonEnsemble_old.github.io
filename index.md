@@ -49,7 +49,7 @@ By changing the metal nodes and linker molecules, *many* different MOFs can be s
 	</center>
 </figure>
 
-For example, below is an interactive visualization of Ni(SiF$_6$)(pyrazine). Left-click and drag to rotate, and scroll with your middle mouse button to zoom in.
+For example, below is an interactive visualization of Ni(SiF$_6$)(pyrazine)$_2$. Left-click and drag to rotate, and scroll with your middle mouse button to zoom in.
 
 <iframe src="https://simonensemble.github.io/nisif6.html" width="700px" height="700 px"></iframe>
 
