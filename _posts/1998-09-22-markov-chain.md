@@ -9,7 +9,13 @@ author: Arthur York
 
 Markov chains are useful probability tools that work by defining real world phenomenon as a series of states and the transitions between them. Given the current state only, a Markov chain has enough information to create a probaility distribution of the states that can immediately follow. To better understand them, we will work with an imaginary town that experiences four types of weather: sunny, cloudy, rainy, or snowy. Weird as it may be, the most accurate forecast for any day is based on the previous day's weather. The graph shown in figure 1 is the model for the weather in this town.
 
-## The Markovian Property: Building Blocks of Simulation
+{:.centerr}
+<figure>
+    <img src="/images/markov/markov_model.png" alt="Markov chain model for weather" style="width: 70%;">
+    <figcaption>Fig 1. A Markov chain model for the weather in our fictional town. This doesn't show weights on the transitions to avoid cluttering the image.</figcaption>
+</figure>
+
+## The Markovian Property
 
 In order for a model to accurately depict a Markov chain, that model must follow the Markovian property. This property states that any given state holds all of the information from previous states in order to make a prediction. This is because a Markov chain is memoryless and only "remembers" the current state. As soon as it transitions it forgets where it has been. This means that a Markov chain must be designed in such a way that every state holds all of the information it needs to predict the next state.
 
@@ -24,9 +30,9 @@ Our model is a weighted directed graph so I will be using an adjacency matrix to
 I chose to make the columns sum to one because julia is a column major language. While this is a small simulation, it makes more sense for the related probabilities to be stored close in memory.
 
 {% highlight julia %}
-const markov_model = [ 0.5 0.3 0.2 0.0
+const markov_model = [ 0.5 0.3 0.1 0.0
                        0.4 0.2 0.3 0.2
-                       0.1 0.4 0.3 0.7
+                       0.1 0.4 0.4 0.7
                        0.0 0.1 0.2 0.1 ]
 {% endhighlight %}
 
@@ -34,4 +40,45 @@ We can now use this matrix to determine to calculate probability distributions. 
 
 ## Markov Chain Monte Carlo Algorithms
 
-Suppose now that our fictional town is competing for the title of rainiest town in the United States, but since they only remember the previous day's weather they haven't kept any records! They want to find the average number of days each year that their town experiences rain but their model doesn't show that. 
+Suppose now that our fictional town is competing for the title of rainiest town in the United States, but since they only remember the previous day's weather they haven't kept any records! They want to find the average number of days each year that their town experiences rain but their model doesn't show that. They can use a Markov chain Monte Carlo simulation to calculate this average. 
+
+The Markov chain Monte Carlo simulation will change use the probability distribution for the current state to randomly select the next state. The potential states will occupy ranges of values from 0 to 1, and a random number between 0 and 1 will be generated. The range this value falls into will show the next state. The following code is used to transition between states. This process can be continued as many times as we specify.
+
+{% highlight julia %}
+function move(state::Int)
+
+    new_state = 1
+    probability = markov_model[new_state, state]
+    move_choice = rand()
+    # iterates through probabilities to find the "pot" that was selected
+    while move_choice > probability && probability < 1.0
+        new_state += 1
+        probability += markov_model[new_state, state]
+    end
+
+    return new_state
+end
+{% endhighlight %}
+
+For the purposes of finding the average number of days in a year, we can run a simulation with 10,000 cycles and then find the probability density function for the weather. The following code runs a simulation with 10,000 cycles and calculates the probability density function for that data. 
+
+{% highlight julia %}
+# Seeded Random to get same results
+Random.seed!(1234)
+# runs a Markov chain Monte Carlo simulaiton with 10,000 cycles
+progression = mcmc_weather(10000)
+prob_density = calculate_probability_density(progression)
+
+# Probability of sun: 0.230700
+#   Days of sun in a year: 84
+# Probability of clouds: 0.287100
+#   Days of clouds in a year: 105
+# Probability of rain: 0.369800
+#   Days of rain in a year: 135
+# Probability of snow: 0.112400
+#   Days of snow in a year: 41
+{% endhighlight %}
+
+With the data collected from a 10,000 cycle simulation there are an average of 135 days per year that our imaginary town experiences rain. This number is an estimate, and will become more accurate the more samples we take.
+
+We are able to use a Markov chain Monte Carlo simulation in this instance because we know the exact probabilities of tranisitioning to different states. If we instead studied the temperature in our town and only knew that the probability of a given state was proportional to the current temperature we would need to run a Metropolis Hastings algorithm instead.  
