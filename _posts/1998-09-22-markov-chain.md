@@ -9,6 +9,8 @@ author: Arthur York
 
 Markov chains are useful probability tools that work by defining real world phenomenon as a series of states and the transitions between them. Given the current state only, a Markov chain has enough information to create a probaility distribution of the states that can immediately follow. To better understand them, we will work with an imaginary town that experiences four types of weather: sunny, cloudy, rainy, or snowy. Weird as it may be, the most accurate forecast for any day is based on the previous day's weather. The graph shown in figure 1 is the model for the weather in this town.
 
+All of the code I wrote for experimenting with Markov chains can be found [here](https://github.com/ahyork/markov_chains).
+
 {:.centerr}
 <figure>
     <img src="/images/markov/markov_model.png" alt="Markov chain model for weather" style="width: 70%;">
@@ -81,4 +83,34 @@ prob_density = calculate_probability_density(progression)
 
 With the data collected from a 10,000 cycle simulation there are an average of 135 days per year that our imaginary town experiences rain. This number is an estimate, and will become more accurate the more samples we take.
 
-We are able to use a Markov chain Monte Carlo simulation in this instance because we know the exact probabilities of tranisitioning to different states. If we instead studied the temperature in our town and only knew that the probability of a given state was proportional to the current temperature we would need to run a Metropolis Hastings algorithm instead.  
+### Using Eigenvectors to find the steady state of a Markov chain model
+
+Because we have an adjacency matrix represeting our model, we can use the eigenvectors to analytically solve for the steady state. I found a great [blog post](https://medium.com/@andrew.chamberlain/using-eigenvectors-to-find-steady-state-population-flows-cd938f124764) that does a great job of explaining this method.
+
+After going through this, I wrote up some code to run this calculation for me and verify that my Monte Carlo simulation was working correctly. As you can see below, the Monte Carlo method did a great job of finding the steady state of our system!
+
+{% highlight julia %}
+
+S = eigvecs(markov_model)
+S⁻¹ = inv(S)
+Λ = diagm(0 => eigvals(markov_model))
+
+u₀ = [ 1, 0, 0, 0 ] # initial state is sunny
+c = S⁻¹ * u₀ # create this term to remove and S⁻¹ from the equation
+
+steady_state = S[:,1] * c[1]
+
+# Probability of sun: 0.242921
+# Probability of clouds: 0.284650
+# Probability of rain: 0.360656
+# Probability of snow: 0.111773
+
+{% endhighlight %}
+
+## Markov Chain Monte Carlo vs. Metropolis Hastings 
+
+We are able to use a Markov chain Monte Carlo simulation in this instance because we know the exact probabilities of tranisitioning to different states. If we instead studied the temperature in our town and only knew that the probability of a given state was proportional to the current temperature we wouldn't be able to construct a probability distribution from the current state. Instead we could use a Metropolis Hastings algorithm. 
+
+Metropolis Hastings algorithms still work as ways of stepping through Markov chain models, but are slightly different than the Monte Carlo method previously discussed. Because we cannot construct a probability distribution from a given state, we cannot generate a random number to determine the next state. Instead we will propose a new state, and compare their probabilities. In the temperature example we would compare the temperature of the current state and the temperature of the proposed state. We will limit this ratio to only exist bewteen 0.0 and 1.0, so we can then generate a random number in that range to determine if the transition is accepted. 
+
+This ratio makes intuitive sense because if the proportional probability of the suggested move is much greater than the current state (the ratio is $\geq$ 1)it will almost always accept the transition. However if the probability of the current state is much greater (the ratio is very close to 0), then it is very unlikely that it will transition.
