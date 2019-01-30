@@ -26,7 +26,7 @@ titlez {
 
 # Assistant Professor
 
-![Cory](photos/cory_bowtie.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
+![Cory](photos/cory.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Cory Simon</span><br>
 Cory.Simon [at] oregonstate.edu<br>
 Kelley Engineering Center 2045<br><br>
