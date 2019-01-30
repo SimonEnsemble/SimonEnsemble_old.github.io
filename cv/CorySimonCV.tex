@@ -1,0 +1,350 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+\AtBeginDocument{\hypersetup{pdfborder = 0 0 1,linkcolor=blue}}
+
+\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{soul} % for strike trhough
+\usepackage{etaremune} % reverse enumerate for pubs
+% moderncv themes
+\usepackage[scale=0.9]{geometry}
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage{moderntimeline}
+\tlmaxdates{2005}{2016}
+%% Set the line width.
+%% This automatically sets the space under the top label to be 1pt more
+\tlwidth{0.8ex}
+%\tltextstart[base]{\scriptsize}
+%% Set the labels text size
+\tltext{\scriptsize}
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Cory}{Simon}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+%\phone[mobile]{415-590-0951}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fixed]{(415)~590~0951}
+\email{Cory.Simon@oregonstate.edu}                               % optional, remove / comment the line if not wanted
+\homepage{simonensemble.github.io/}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{CoryMSimon}                             % optional, remove / comment the line if not wanted
+%\social[github]{CorySimon}                              % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Seeking a faculty position to identify, frame, and solve impactful problems, mentor students, and disseminate knowledge}                                
+%\quote{Seeking a research position to identify, frame, and solve impactful problems and disseminate knowledge}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+
+\section{Education}
+%\cventry{2012--2016}
+\tlcventry{2012}{2016}{Ph.D. Chemical Engineering}{University of California, Berkeley}{}{}{
+Topic: screening large databases of nanoporous materials for storing and separating gases using statistical mechanical models, molecular simulations, and machine learning\newline
+Supervisor: Berend Smit\newline GPA: 3.7/4.0.}  % arguments 3 to 6 can be left empty
+%\cventry{2010--2012}
+\tlcventry{2010}{2012}{\st{Ph.D. Mathematics}}{University of British Columbia}{}{}{
+Topic: understanding how a protein signaling network orchestrates cellular wound healing using mathematical models\newline
+Supervisor: Leah Keshet\newline
+Passed qualifying exams. Course average: 93.6\%.}
+%\cventry{2005--2010}
+\tlcventry{2005}{2010}{B.S. Chemical Engineering}{The University of Akron}{}{}{\emph{Summa Cum Laude}. GPA: 3.993/4.0\\Minor: Applied mathematics}
+
+
+\section{Professional appointments}
+
+\cventry{2017-}{Assistant Professor}{Oregon State University}{Corvallis, Oregon}{}{School of Chemical, Biological, and Environmental Engineering
+}
+\cventry{2017}{Fellow}{Altius Institute for Biomedical Sciences}{Seattle, Washington}{}
+{\begin{itemize}
+\item developed zero-inflated ConvNet regression model to predict gene expression from DNA promoter sequence
+\item employed ConvNet autoencoders to learn structure in DNA promoter sequences
+\end{itemize}
+}
+\cventry{Summer 2016}{Visiting Scholar}{\'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne (EPFL)}{Sion, Switzerland}{}{Developed statistical mechanical model of porous crystals with rotating ligands}
+\cventry{Spring, Summer 2015}{Department of Energy Fellow}{Lawrence Berkeley National Lab}{Berkeley, CA}{}{Rapidly screened large databases of nanoporous materials using machine learning}
+\cventry{Fall 2014}{Data Science Intern}{Stitch Fix}{San Francisco, CA}{}{Developed and wrote recommendation algorithms for clothing purchases (collaborative filtering, matrix factorization)
+}
+\cventry{Summer 2012}{Research Intern}{Okinawa Institute of Science and Technology}{Okinawa, Japan}{}{Investigated how the morphology of dendritic spines influences the compartmentalization of diffusing surface receptors using mathematical models}
+\cventry{Summer 2009}{REU student}{Virginia Bioinformatics Institute}{Blacksburg, VA}{}{Distinguished between sociological and biological factors in the transmission of H1N1/09 influenza using mathematical model}
+\cventry{2007--2009}{Chemical Engineering Co-op}{Bridgestone Center for Research and Technology}{Akron, OH}{}{Characterized reaction rates in a bulk polymerization process to produce butadiene, wrote control programs in DeltaV}
+\cventry{Summer 2006}{Research Assistant}{Dept. of Chemical and Biomolecular Engineering}{Akron, OH}{}{Investigated the effect of wavelength of light on cyanobacteria growth}
+
+\section{Peer-reviewed publications}
+\href{https://scholar.google.com/citations?user=eoR8MNMAAAAJ&hl=en}{Google Scholar Profile}
+\begin{etaremune}[itemsep=0pt]
+\item \textbf{C. Simon}, C. Carraro. Multi- and in-stabilities in gas partitioning between nanoporous materials and rubber balloons.
+\emph{Proc. Royal Soc. A} (2019) \href{https://chemrxiv.org/articles/Multi-_and_In-Stabilities_in_Gas_Partitioning_Between_Nanoporous_Materials_and_Rubber_Balloons/7135928}{DOI} 
+\item A. Sturluson, M. T. Huynh, A. H. York, \textbf{C. Simon}.
+Eigencages: Learning a latent space of porous cage molecules.
+\emph{ACS Cent. Sci.} (2018) \href{http://dx.doi.org/10.1021/acscentsci.8b00638}{DOI} Press coverage: \href{https://today.oregonstate.edu/news/machine-learning-research-osu-unlocking-molecular-cages\%E2\%80\%99-energy-saving-potential}{Oregon State University}
+\item D. Banerjee, \textbf{C. Simon}, S. Elsaidi, M. Haranczyk, P. Thallapally.
+Xenon Gas Separation and Storage using Metal Organic Frameworks.
+\emph{Chem.} (2018) \href{https://doi.org/10.1016/j.chempr.2017.12.025}{DOI}
+\item S. Li, Y. Chung, \textbf{C. Simon}, R. Snurr. High-Throughput Computational Screening of Multivariate Metal-Organic Frameworks (MTV-MOFs) for CO$_2$ Capture. \emph{J. Phys. Chem. Lett.} (2018) \href{http://dx.doi.org/10.1021/acs.jpclett.7b02700}{DOI}
+\item \textbf{C. Simon}, E. Braun, C. Carraro, B. Smit. Statistical mechanical model of gas adsorption in porous crystals with dynamic moieties. \emph{Proc. Natl. Acad. Sci.} (2017) \href{http://dx.doi.org/10.1073/pnas.1613874114}{DOI} 
+\item S. Elsaidi, M. Mohamed, \textbf{C. Simon}, E. Braun, T. Pham, K. Forrest, W. Xu, D. Banerjee, B. Space, M. Zaworotko, P. Thallapally. Effect of ring rotation upon gas adsorption in SIFSIX-3-M (M = Fe, Ni) pillared square grid networks. \emph{Chem. Sci.} (2017) \href{http://dx.doi.org/10.1039/C6SC05012C}{DOI} 
+\item S. Jawahery, \textbf{C. Simon}, E. Braun, M. Witman, D. Tiana, B. Vlaisavljevich, B. Smit. Adsorbate-induced lattice deformation in the IRMOF-74 series. \emph{Nat. Comm.} (2017) \href{http://www.nature.com/articles/ncomms13945}{DOI}
+\item A. Thornton, \textbf{C. Simon}, J. Kim, O. Kwon, K. Deeg, K. Konstas, S. Pas, M. Hill, D. Winkler, M. Haranczyk, B. Smit. The Materials Genome in action: identifying the performance limits of physical hydrogen storage. \emph{Chem. Mater.} (2017) \href{http://dx.doi.org/10.1021/acs.chemmater.6b04933}{DOI} 
+\item R. Patil, D. Banerjee, \textbf{C. Simon}, J. Atwood, P. Thallapally. Noria, a highly Xe-selective Nanoporous Organic Solid. \emph{Chem. Eur. J.} (2016) \href{http://dx.doi.org/10.1002/chem.201602131}{DOI} 
+Press coverage: \href{http://onlinelibrary.wiley.com/doi/10.1002/chem.201683661/full}{Frontispiece}, \href{http://www.wiley-vch.de/publish/en/journals/alphabeticIndex/2111/news/40104/?sID=t5djjts194ffu97p27174b3j20}{Hot paper}, \href{http://www.chemistryviews.org/details/ezine/9622851/Recovering_Xenon_from_Waste.html}{Chemistry Views}
+\item D. Banerjee, \textbf{C. Simon}, A. Plonka, R. Motkuri, J. Liu, X. Chen, B. Smit, J. Parise, M. Haranczyk, P. Thallapally. Metal-Organic Framework with Optimal Adsorption, Separation, and Selectivity towards Xenon. \emph{Nat. Comm.} (2016) \href{http://dx.doi.org/10.1038/ncomms11831}{DOI} Press coverage: \href{http://cs.lbl.gov/news-media/news/2016/sbmof-1/}{LBL}, \href{http://actu.epfl.ch/news/a-new-material-can-clear-up-nuclear-waste-gases/}{EPFL}, \href{https://www.researchgate.net/blog/post/new-material-can-safely-and-efficiently-deal-with-nuclear-waste-gases}{Research Gate}, \href{http://cen.acs.org/articles/94/i26/Selective-sorbent-traps-xenon-krypton.html}{Chemical \& Engineering News}
+\item D. Gomez-Gualdron, \textbf{C. Simon}, W. Lassman, D. Chen, R. L. Martin, M. Haranczyk, O. K. Farha, B. Smit, R. Q. Snurr. Impact of the strength and spatial distribution of adsorption sites on methane deliverable capacity in nanoporous materials. \emph{Chem. Eng. Sci.} (2016) \href{http://dx.doi.org/10.1016/j.ces.2016.02.030}{DOI}
+\item \textbf{C. Simon}, B. Smit, M. Haranczyk. pyIAST: Ideal Adsorbed Solution Theory (IAST) Python package. \emph{Comput. Phys. Commun.} (2016) \href{http://dx.doi.org/doi:10.1016/j.cpc.2015.11.016}{DOI}
+\item \textbf{C. Simon}, R. Mercado, S. K. Schnell, B. Smit, and M. Haranczyk. What Are the Best Materials To Separate a Xenon/Krypton Mixture? \emph{Chem. Mater.} (2015) \href{http://dx.doi.org/10.1021/acs.chemmater.5b01475}{DOI}
+\item \textbf{C. Simon}, J. Kim, D. Gomez-Gualdron, J. Camp, Y. Chung, R. L. Martin, R. Mercado, M.W. Deem, D. Gunter, M. Haranczyk, D. Sholl, R. Snurr, B. Smit. The Materials Genome in Action: Identifying the Performance Limits to Methane Storage. \emph{Energy Environ. Sci.} (2015) \href{http://dx.doi.org/10.1039/C4EE03515A}{DOI} Inside front cover art. Press coverage: \href{http://www.rsc.org/chemistryworld/2015/02/mof-methane-storage-materials-genome-initiative}{Chemistry World}, \href{http://actu.epfl.ch/news/methane-storage-targets-are-too-high/}{EPFL}
+\item Y. Bao, R. L. Martin, \textbf{C. Simon}, M. Haranczyk, B. Smit, and M.W. Deem. In Silico Discovery of High Deliverable Capacity Metal-Organic Frameworks. \emph{J. Phys. Chem. C.} (2014) \href{http://dx.doi.org/10.1021/jp5123486}{DOI}
+\item D. Feng, K. Wang, Z. Wei, Y.P. Chen, \textbf{C. Simon}, R. Arvapally, R.L. Martin, M. Bosch, T.F. Liu, S. Fordham, D. Yuan, M.A. Omary, M. Haranczyk, B. Smit, H.C. Zhou. Kinetically tuned dimensional augmentation as a versatile synthetic route towards robust metal-organic frameworks. \emph{Nat. Comm.} (2014) \href{http://dx.doi.org/10.1038/ncomms6723}{DOI}
+\item R. L. Martin, \textbf{C. Simon}, B. Medasani, D. Britt, B. Smit, and M. Haranczyk. In silico Design of Three-Dimensional Porous Covalent Organic Frameworks via Known Synthesis Routes and Commercially Available Species. \emph{J. Phys. Chem. C.} (2014) \href{http://dx.doi.org/10.1021/jp507152j}{DOI}
+\item R. L. Martin, \textbf{C. Simon}, B. Smit, M. Haranczyk. In silico design of porous polymer networks: high-throughput screening for methane storage materials. \emph{J. Am. Chem. Soc.} (2014) \href{http://dx.doi.org/10.1021/ja4123939}{DOI}
+\item \textbf{C. Simon}, J. Kim, L.C. Lin, R.L. Martin, M. Haranczyk, B. Smit. Optimizing nanoporous materials for gas storage. \emph{PCCP.} (2014) \href{http://dx.doi.org/10.1039/C3CP55039G}{DOI} Front cover art. 
+\item R. L. Martin, H.C. Zhou, M.N. Shahrak, B. Smit, J. Swisher, \textbf{C. Simon}, J. Sculley, and M. Haranczyk. Modeling Methane Adsorption in Interpenetrating Porous Polymer Networks. \emph{J. Phys. Chem. C.} (2013) \href{http://dx.doi.org/10.1021/jp406918d}{DOI}
+\item \textbf{C. Simon}, I. Hepburn, W. Chen, E. De Schutter. The role of dendritic spine morphology in the compartmentalization and delivery of surface receptors. \emph{J. Compt. Neurosci.} (2013) \href{http://dx.doi.org/10.1007/s10827-013-0482-4}{DOI}
+\item \textbf{C. Simon}, E. Vaughan, W. Bement, and L. Edelstein-Keshet. Pattern formation of Rho GTPases in single cell wound healing. \emph{Mol. Biol. Cell.} (2013) \href{http://dx.doi.org/10.1091/mbc.E12-08-0634}{DOI}
+\item K. Han, H. Hu, E. Ko, O. Ozer, \textbf{C. Simon}, C. Tan. A variational approach to modeling aircraft hoses and flexible conduits. \emph{Mathematics-in-Industry Case Studies.} (2012) \href{http://www.fields.utoronto.ca/journalarchive/mics/52-35.pdf}{DOI}
+\item \textbf{C. Simon}, N. Yosinao. A mathematical model to distinguish the sociological and biological susceptibility factors in disease transmission in the context of H1N1/09 influenza. \emph{J. Theor. Biol.} (2011) \href{http://dx.doi.org/10.1016/j.jtbi.2011.07.008}{DOI} \href{http://f1000.com/prime/13223967}{Recommended by Faculty of 1000}
+\end{etaremune}
+
+\section{Articles for public outreach}
+Technical blog: \href{http://corysimon.github.io/}{http://corysimon.github.io/}
+
+\begin{etaremune}[itemsep=0pt]
+\item \textbf{C. Simon}, J. Kim, R. L. Martin, M. Haranczyk, B. Smit. Accelerating Materials Discovery with CUDA. \emph{NVIDIA's Parallel for All blog.} (2015) \href{http://devblogs.nvidia.com/parallelforall/accelerating-materials-discovery-cuda/}{Link}
+
+\item \textbf{C. Simon}, J. Kim, D. Gomez-Gualdron, Y. Chung, R. L. Martin, R. Mercado, M. Deem, D. Gunter, M. Haranczyk, R. Snurr, and B. Smit. Computer-Aided Search for Materials to Store Natural Gas for Vehicles. \emph{Frontiers for Young Minds.} (2015) \href{http://dx.doi.org/10.3389/frym.2015.00011}{Link}
+
+\item \textbf{C. Simon}. What are the best materials to separate a Xe/Kr mixture? \emph{UC Berkeley ChemE Blog.} (2015) \href{http://berkeleycheme.github.io//articles/xekr/}{Link}
+
+\item \textbf{C. Simon} and B. Smit. Viagra ads and NSA watchlists: smoke but usually no fire. \emph{Scientific American Guest Blog.} (2013) \href{http://blogs.scientificamerican.com/guest-blog/2013/09/22/viagra-ads-and-nsa-watch-lists-smoke-but-usually-no-fire/}{Link}
+
+\item \textbf{C. Simon}. Post-combustion CO$_2$ capture to mitigate climate change: separation costs energy. \emph{Scientific American Guest Blog.} (2013) \href{http://blogs.scientificamerican.com/guest-blog/2013/03/07/post-combustion-co2-capture-to-mitigate-climate-change-separation-costs-energy/}{Link}
+\end{etaremune}
+
+
+
+\section{Teaching experience}
+
+Outstanding Graduate Student Instructor Award at UC Berkeley, 2012.
+
+\cventry{Winter 2018, 2019}{Instructor}{CHE 361: Process Dynamics \& Simulation}{Oregon State University}{$\sim$115 students}{}
+\cventry{Spring 2018}{Instructor}{CHE 461: Process Control}{Oregon State University}{$\sim$115 students}{}
+\cventry{Fall 2015}{Graduate student instructor}{Graduate Statistical Mechanics}{UC Berkeley}{}{Teaching effectiveness: 4.2/5.0}
+\cventry{Fall 2013}{Graduate student instructor}{Graduate Statistical Mechanics}{UC Berkeley}{}{Teaching effectiveness: 4.6/5.0}
+\cventry{Fall 2012}{Graduate student instructor}{Material and Energy Balances}{UC Berkeley}{}{Teaching effectiveness: 6.6/7.0}
+\cventry{Spring 2011}{Teaching assistant}{Linear Systems}{University of British Columbia}{}{Held computer lab session (programming in MATLAB)}
+\cventry{2010-2012}{Math center drop-in tutor}{}{University of British Columbia}{}{Spontaneously explained math problems to undergraduates using a dry erase board}
+\cventry{2006, 2010}{Math and chemistry tutor}{}{University of Akron}{}{}
+
+\section{Software}
+Github username: \href{https://github.com/CorySimon}{SimonEnsemble}
+
+
+\cvlistitem{\href{https://github.com/CorySimon/pyIAST}{pyIAST}: Python package for Ideal Adsorbed Solution Theory}
+ \cvlistitem{\href{https://github.com/SimonEnsemble/PorousMaterials.jl}{PorousMaterials.jl}: Julia package for classical molecular modeling of adsorption in porous crystals such as metal-organic frameworks (MOFs)}
+
+\section{Computer programming}
+Proficient scientific programmer.
+
+
+Julia, Python (numpy, scipy, pandas, scikit-learn, keras), C, C++, CUDA, Bash, SQL.
+
+
+Data visualization: Matplotlib, Seaborn, VisIt, Gadfly.
+
+%\section{Relevant Coursework} Machine learning (two courses), Probability, Parallel Computing, Numerical Methods, Statistical Mechanics, Green's Functions and Variational Calculus, Partial Differential Equations
+
+
+ 
+\section{Workshops}
+\cventry{Aug 2017}{BC data workshop}{University of British Columbia}{Vancouver, BC, Canada}{}{Designed project ``Elucidating enhancer-promoter gene expression using ConvNets'' and mentored nine PhD students for a week.}
+
+\section{Awards}
+
+\cventry{2014}{DOE Office of Science Graduate Fellowship (SCGSR)}{Lawrence Berkeley National Lab}{}{}{}
+\cventry{2012}{Outstanding Graduate Student Instructor Award}{UC Berkeley}{}{}{}
+\cventry{2011-2013}{Pacific Institute of Mathematical Sciences Math Biology Fellowship}{University of British Columbia}{}{}{}
+\cventry{2010}{Department of Chemical Engineering Faculty Award}{The University of Akron}{}{}{}
+\cventry{2008, 2009}{The American Chemical Society (ACS) Rubber Division Scholarship}{The University of Akron}{}{}{}
+\cventry{2009}{Larry G. Foght Chemical Engineering Department Award}{The University of Akron}{}{}{}
+\cventry{2009, 2010}{Lubrizol Scholarship}{The University of Akron}{}{}{}
+\cventry{2006-2009}{Presidential Scholarship}{The University of Akron}{}{}{}
+\cventry{2006-2009}{Honors College Scholarship}{The University of Akron}{}{}{}
+
+%
+%\section{Selected talks and conference presentations}
+%\cvlistitem{
+%C. Simon, R. Mercado, S. Schnell, B. Smit, M. Haranczyk. Screening the Nanoporous Materials Genome for xenon/krypton separations using machine learning. (poster) Foundations of Molecular Modeling and Simulation (FOMMS). Mt. Hood, OR. (Jul. 2015)
+%}
+%\cvlistitem{
+%C. Simon, J. Kim, D. Gomez-Gualdron, J. Camp, Y. Chung, R. L. Martin, R. Mercado, M.W. Deem, D. Gunter, M. Haranczyk, D. Sholl, R. Snurr, B. Smit. The Materials Genome in Action: Identifying the Performance Limits to Methane Storage. (talk) American Chemical Society Meeting. Denver, CO. (Mar. 2015)
+%}
+%\cvlistitem{
+%C. Simon, J. Kim, R. L. Martin, M. Haranczyk, B. Smit. Optimizing nanoporous materials for methane storage. (talk) Materials Research Society Meeting. San Francisco, CA. (Apr. 2014)
+%}
+%\cvlistitem{
+%C. Simon. Pattern formation of proteins during single-cell wound healing. (talk) Mathematical Biology Summer Course. UBC. Vancouver, BC. (May 2012) 
+%\href{http://www.mathtube.org/node/190/view}{On MathTube}
+%}
+%\cvlistitem{
+%C. Simon, W. Bement, L. Keshet. Pattern formation of proteins during single-cell wound healing. (talk) Frontiers in Biophysics Conference. Simon Fraser University. Burnaby, BC. (Feb. 2012)
+%}
+%\cvlistitem{
+%C. Simon, W. Bement, L. Keshet. Pattern Formation of Proteins on the Surface of a Biological Cell. (poster) Mathematical Biology Workshop and Igineering and material science. We collaborate with both academia and industry to gain understanding of surface reactions for improved catalysis and corrosion resistance.
+
+% GTC Summit. Victoria, BC. (Jul. 2011)
+%First place poster award.
+%}
+%\cvlistitem{
+%C. Simon and N. Yosinao. An Age-structured model of the transmission of H1N1/09 influenza. (poster) Joint Math Meetings. San Francisco, CA. (Jan. 2010)
+%}
+%\cvlistitem{
+%C. Simon and N. Yosinao. An Age-structured model of the transmission of H1N1/09 influenza. (talk) James Madison University SUMS Undergraduate Conference. Harrisonburg, VA. (Oct. 2009)
+%-- Best Research Award.
+%}
+%
+%\section{Peer-review service}
+%Chemical Science, Molecular Simulation.
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{}{
+%  \begin{itemize}
+%  \item \textbf{Prof. Berend Smit}\\
+%   UC Berkeley\\
+%   Dept. Chem. \& Biol. Eng. \\
+%   berend-smit@berkeley.edu   
+%   \item \textbf{Prof. Carlo Carraro} \\
+%     UC Berkeley\\
+%     Dept. Chem. \& Biol. Eng. \\
+%     carraro@berkeley.edu
+%  \end{itemize}
+%  }
+%  \cvcolumn{}{
+%  \begin{itemize}
+%		\item \textbf{Dr. Praveen Thallapally} \\
+%		Pacific Northwest National Lab \\
+%		Praveen.Thallapally@pnnl.gov
+%  \end{itemize}}
+%\end{cvcolumns}
+%%\begin{cvcolumns}
+%%  \cvcolumn{}{
+%%  \begin{itemize}
+%%  \item \textbf{Prof. Berend Smit}\\
+%%   UC Berkeley\\
+%%   Dept. Chem. \& Biol. Eng. \\
+%%   berend-smit@berkeley.edu   
+%%   \item \textbf{Prof. Carlo Carraro} \\
+%%     UC Berkeley\\
+%%     Dept. Chem. \& Biol. Eng. \\
+%%     carraro@berkeley.edu
+%%   \item \textbf{Dr. Maciej Haranczyk}\\
+%%   	Lawrence Berkeley National Lab \\
+%%   	mharanczyk@lbl.gov
+%%  \end{itemize}
+%%  }
+%%  \cvcolumn{}{
+%%  \begin{itemize}
+%%		\item \textbf{Dr. Praveen Thallapally} \\
+%%		Pacific Northwest National Lab \\
+%%		Praveen.Thallapally@pnnl.gov
+%%		\item \textbf{Dr. Brad Klingenberg} \\
+%%		Data Scientist, Stitch Fix\\
+%%		bklingenberg@stitchfix.com
+%%		\item \textbf{Prof. Leah Keshet}\\
+%%		University of British Columbia\\
+%%		Dept. of Mathematics\\
+%%		keshet@math.ubc.ca 
+%%  \end{itemize}}
+%%\end{cvcolumns}
+
+\section{Invited talks}
+\cventry{June 2017}{The University of British Columbia}{Department of Mathematics}{Vancouver, BC, Canada}{}{``Statistical learning models to identify the ingredients of enhancer-responsive gene promoters''}
+
+\section{Personal interests}
+Snowboarding, running, hiking, backpacking, snorkeling, playing guitar, traveling, photography (\href{https://ello.co/cokes}{Ello page})
+%
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+%
+
+%
+%% Publications from a BibTeX file without multibib
+%%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+%
+%% Publications from a BibTeX file using the multibib package
+%%\section{Publications}
+%%\nocitebook{book1,book2}
+%%\bibliographystylebook{plain}
+%%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%%\nocitemisc{misc1,misc2,misc3}
+%%\bibliographystylemisc{plain}
+%%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+%
+%\clearpage
+%%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%
+%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%
+%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+%
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+%
+%\makeletterclosing
+%
+%%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+%
+%
+%%% end of file `template.tex'.

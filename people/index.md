@@ -31,7 +31,7 @@ titlez {
 Cory.Simon [at] oregonstate.edu<br>
 Kelley Engineering Center 2045<br><br>
 <a href="https://twitter.com/CoryMSimon" data-size="large" class="twitter-follow-button" data-show-count="false">Follow @CoryMSimon</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br>
-<a href="{{ site.url }}/CorySimonCV.pdf">Full Curriculum Vitae</a>.<br>
+<a href="{{ site.url }}/cv/CorySimonCV.pdf">Full Curriculum Vitae</a>.<br>
 <div style="clear: both;"></div>
 
 **Education**
