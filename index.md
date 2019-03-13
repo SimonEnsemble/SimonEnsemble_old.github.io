@@ -1,8 +1,8 @@
 ---
 feature_text: |
   # <span style="color:white">The Simon Research Ensemble</span>
-   We use machine learning, molecular models & simulations, and statistical mechanics to study adsorption in nano-porous materials.
-feature_image: images/hartscove.JPG
+   <br><br>We use machine learning, molecular models & simulations, and statistical mechanics to study adsorption in nano-porous materials.
+feature_image: images/burnt_lake.jpg
 excerpt: "The Simon Ensemble at Oregon State University"
 ---
 
