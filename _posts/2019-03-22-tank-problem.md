@@ -85,3 +85,68 @@ Finally, completing our dynamic differential equation model for the liquid level
 $\left[\frac{h}{H} L_t + \left(1-\frac{h}{H}\right)L_b \right]^2 \dfrac{dh}{dt}= q_i - c\sqrt{h}$
 
 This differential equation is non-linear. The solution $h(t)$ for a given initial condition $h(t=0)$ and input flow scheme $q_i(t)$ can be obtained (i) numerically e.g. through [DifferentialEquations.jl](http://docs.juliadiffeq.org/latest/) or (ii) via an approximate linearized model about a nominal steady state condition $\bar{h}$ and $\bar{q_i}$.
+
+## Numerical solution
+
+Let's write code in Julia and use DifferentialEquations.jl to numerically approximate the solution to our tank problem when the tank is initially empty and liquid flows into the tank at a constant rate.
+
+First, we load some packages and define our parameters.
+
+```{julia}
+using DifferentialEquations
+using PyPlot # for plotting
+using LaTeXStrings # for LaTeX strings in plots
+
+PyPlot.matplotlib[:style][:use]("Solarize_Light2") # dope plot style
+
+# specify tank geometry
+H = 4.0 # tank height, m
+Lb = 5.0 # bottom base length, m
+Lt = 2.0 # top base length, m
+
+# specify resistance to flow
+c = 1.0 # awkward units
+
+# inlet flow rate (could be funciton of time)
+qᵢ = 1.5 # m³/s
+
+# initial liquid level
+h₀ = 0.0 
+```
+
+Second, we use DifferentialEquations.jl to numerically solve the ODE.
+
+```{julia}
+tspan = (0.0, 150.0) # solve for 0 s to 150 s
+
+# area from a helicopter view, m²
+A(h, Lt, Lb, H) = (h/H * Lt + (1 - h/H) * Lb) ^ 2
+
+# right-hand-side of ODE
+rhs(h, p, t) = (qᵢ - c * sqrt(h)) / A(h, Lt, Lb, H)
+
+# DifferentialEquations.jl syntax
+prob = ODEProblem(rhs, h₀, tspan)
+sol = solve(prob)
+```
+
+We can now plot the solution as follows.
+
+```${julia}
+t = range(0.0, stop=tspan[2], length=300)
+h = sol.(t) # easy as that to compute solution at an array of times!
+
+figure()
+axhline(y=H, linestyle="--", color="k")
+xlabel(L"$t$, time [s]")
+ylabel(L"$h$, liquid level [m]")
+plot(t, h, lw=3, color="orange")
+```
+
+We see how $h$ changes with time as the tank fills up. The vertical dashed line shows $H$. Despite constant flow into the tank, the tank does not overflow since hydrostatic pressure drives flow out of the tank. The liquid level reaches a steady state when the flow into the tank balances the rate at which hydrostatic pressure drives fluid out of the tank.
+
+{:.centerr}
+<figure>
+    <img src="/images/tank_problem/numerical_soln.png" alt="image" style="width: 70%;">
+</figure>
+
