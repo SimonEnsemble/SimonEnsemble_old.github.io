@@ -93,7 +93,7 @@ Let's write code in Julia and use DifferentialEquations.jl to numerically approx
 
 First, we load some packages and define our parameters.
 
-```{julia}
+{% highlight julia %}
 using DifferentialEquations
 using PyPlot # for plotting
 using LaTeXStrings # for LaTeX strings in plots
@@ -113,11 +113,11 @@ qᵢ = 1.5 # m³/s
 
 # initial liquid level
 h₀ = 0.0 
-```
+{% endhighlight %}
 
 Second, we use DifferentialEquations.jl to numerically solve the ODE.
 
-```{julia}
+{% highlight julia %}
 tspan = (0.0, 150.0) # solve for 0 s to 150 s
 
 # area from a helicopter view, m²
@@ -129,11 +129,11 @@ rhs(h, p, t) = (qᵢ - c * sqrt(h)) / A(h, Lt, Lb, H)
 # DifferentialEquations.jl syntax
 prob = ODEProblem(rhs, h₀, tspan)
 sol = solve(prob)
-```
+{% endhighlight %}
 
 We next plot the solution.
 
-```${julia}
+{% highlight julia %}
 t = range(0.0, stop=tspan[2], length=300)
 h = sol.(t) # easy as that to compute solution at an array of times!
 
@@ -142,7 +142,7 @@ axhline(y=H, linestyle="--", color="k")
 xlabel(L"$t$, time [s]")
 ylabel(L"$h$, liquid level [m]")
 plot(t, h, lw=3, color="orange")
-```
+{% endhighlight %}
 
 {:.centerr}
 <figure>
