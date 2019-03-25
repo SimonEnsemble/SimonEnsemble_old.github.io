@@ -149,7 +149,7 @@ plot(t, h, lw=3, color="orange")
     <img src="/images/tank_problem/numerical_soln.png" alt="image" style="width: 100%;">
 </figure>
 
-The plot above shows the resulting $h(t)$. The vertical dashed line shows the tank height $H$. Despite constant flow into the tank, the tank does not overflow since, if the tank will filled ($h=H$), the hydrostatic pressure drives flow out of the tank faster than the incoming flow rate. The liquid level reaches a steady state $\bar{h}$ when the flow rate of liquid into the tank balances the rate at which hydrostatic pressure drives liquid out of the tank:
+The plot above shows the resulting $h(t)$. The horizontal dashed line denotes the tank height $H$. Despite constant flow into the tank, the liquid does not overflow the tank since, if the tank is completely filled ($h=H$), hydrostatic pressure at the bottom drives flow out of the tank faster than the incoming flow rate $q_i$. The liquid level reaches a steady state $\bar{h}$ when the flow rate of liquid into the tank balances the rate at which hydrostatic pressure drives liquid out of the tank:
 
 {:.centerr}
 $q_i-c\sqrt{\bar{h}}=0$
